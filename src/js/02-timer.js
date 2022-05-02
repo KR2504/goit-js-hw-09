@@ -56,10 +56,10 @@ function handleClick() {
             refs.hours.textContent = `${hours}`;
             refs.minutes.textContent = `${minutes}`;
             refs.seconds.textContent = `${seconds}`;
+            refs.btnStart.disabled = true;
 
             if (`${days}` === '00' && `${hours}` === '00' && `${minutes}` === '00' && `${seconds}` === '00') {
                 clearInterval(timeId);
-                refs.btnStart.disabled = true;
             }
         },
         TIME_DELAY)
